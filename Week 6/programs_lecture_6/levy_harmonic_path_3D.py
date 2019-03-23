@@ -22,4 +22,4 @@ x = levy_harmonic_1d(xstart, xend, dtau)
 y = levy_harmonic_1d(ystart, yend, dtau)
 z = levy_harmonic_1d(zstart, zend, dtau)
 for i in range(N + 1):
-    print 'slice %2i:  ' % i, x[i], y[i], z[i]
+    print('slice %2i:  ' % i, x[i], y[i], z[i])

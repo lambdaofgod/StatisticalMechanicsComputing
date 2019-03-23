@@ -31,8 +31,8 @@ def snapshot(pos, colors, border_color = 'k'):
     global img
     pylab.figure()
     pylab.axis([0, 1, 0, 1])
-    [i.set_linewidth(2) for i in pylab.gca().spines.itervalues()]
-    [i.set_color(border_color) for i in pylab.gca().spines.itervalues()]
+    [i.set_linewidth(2) for i in list(pylab.gca().spines.values())]
+    [i.set_color(border_color) for i in list(pylab.gca().spines.values())]
     pylab.setp(pylab.gca(), xticks = [0, 1], yticks = [0, 1], aspect = 'equal')
     for (x, y), c in zip(pos, colors):
         circle = pylab.Circle((x, y), radius = sigma, fc = c)
@@ -52,9 +52,9 @@ n_runs = 8
 colors = ['r' for i in range(8 * N)]
 for run in range(n_runs):
     iterations, config =  direct_disks(N, sigma)
-    print 'run',run
-    print iterations - 1, 'tabula rasa wipe-outs before producing the following configuration'
-    print config
-    print
+    print(('run',run))
+    print((iterations - 1, 'tabula rasa wipe-outs before producing the following configuration'))
+    print(config)
+    print()
     config_per = periodicize(config)
     snapshot(config_per, colors, border_color = 'k')

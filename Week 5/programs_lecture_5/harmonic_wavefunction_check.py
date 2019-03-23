@@ -15,9 +15,9 @@ for n in range(2, n_states):
     psi.append([math.sqrt(2.0 / n) * x[i] * psi[n - 1][i] - \
                 math.sqrt((n - 1.0) / n) * psi[n - 2][i] for i in range(nx)])
 n = n_states - 1
-print 'checking energy level', n
+print('checking energy level', n)
 H_psi = [0.0] +  [(- 0.5 * (psi[n][i + 1] - 2.0 * psi[n][i] + psi[n][i - 1]) /
           dx ** 2 + 0.5 * x[i] ** 2 * psi[n][i]) for i in range(1, nx - 1)]
 for i in range(1, nx - 1):  
-    print n, x[i],  H_psi[i] / psi[n][i]
+    print(n, x[i],  H_psi[i] / psi[n][i])
 

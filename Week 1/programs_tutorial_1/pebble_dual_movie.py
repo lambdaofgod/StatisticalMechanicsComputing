@@ -53,11 +53,11 @@ for iter in range(tmax):
         if random.random() < epsilon:
             newcolor = 'blue'
             newsite = 6
-            print "transition red->blue at time = ", iter
+            print(("transition red->blue at time = ", iter))
     if (color == 'blue') and (site == 6) and (newsite == 6):
         if random.random() < epsilon:
             newcolor = 'red'
             newsite = 2
-            print "transition blue->red at time = ", iter
+            print(("transition blue->red at time = ", iter))
     site = newsite
     color = newcolor

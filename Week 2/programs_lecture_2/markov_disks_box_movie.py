@@ -1,6 +1,6 @@
 import random, os, pylab
 
-output_dir = 'C:\Users\Borghi\Desktop\Week 2\programs_lecture_2\markov_disks_box_movie'
+output_dir = 'C:\\Users\Borghi\Desktop\Week 2\programs_lecture_2\markov_disks_box_movie'
 
 img = 0
 if not os.path.exists(output_dir): os.makedirs(output_dir)

@@ -2,7 +2,7 @@ import random, math, pylab, mpl_toolkits.mplot3d
 
 x_list, y_list, z_list = [], [], []
 nsamples = 1000
-for sample in xrange(nsamples):
+for sample in range(nsamples):
     x_list.append(random.gauss(0.0, 1.0))
     y_list.append(random.gauss(0.0, 1.0))
     z_list.append(random.gauss(0.0, 1.0))

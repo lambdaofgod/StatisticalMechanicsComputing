@@ -12,4 +12,4 @@ def gauss_test(sigma):
 nsamples = 50
 for sample in range(nsamples):
     [x, y] = gauss_test(1.0)
-    print x, y
+    print(x, y)

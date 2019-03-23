@@ -13,4 +13,4 @@ for n in range(n_steps):
         if rad <= 1.0: break
     x_tip = x_center - a * 0.5 * dx / rad
     if x_tip < 0.0: n_hits += 1
-print a * 2.0 * n_steps / float(n_hits) / b
+print(a * 2.0 * n_steps / float(n_hits) / b)

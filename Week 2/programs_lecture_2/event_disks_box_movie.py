@@ -1,6 +1,6 @@
 import os, math, pylab
 
-output_dir = "C:\Users\Borghi\Desktop\Week 2\programs_lecture_2\event_disks_box_movie"
+output_dir = "C:\\Users\Borghi\Desktop\Week 2\programs_lecture_2\event_disks_box_movie"
 colors = ['r', 'b', 'g', 'orange']
 
 def wall_time(pos_a, vel_a, sigma):
@@ -26,7 +26,7 @@ def pair_time(pos_a, vel_a, pos_b, vel_b, sigma):
     return del_t
 
 def min_arg(l):
-    return min(zip(l, range(len(l))))
+    return min(list(zip(l, list(range(len(l))))))
 
 def compute_next_event(pos, vel):
     wall_times = [wall_time(pos[k][l], vel[k][l], sigma) for k, l in singles]
@@ -92,7 +92,7 @@ for step in range(n_steps):
     t += remain_t
     next_event -= remain_t
     snapshot(t, pos, vel, colors)
-    print 'time',t
+    print(('time',t))
 
 print('Producing animation.gif using ImageMagick...')
 os.system("convert -delay 1 -dispose Background +page " + str(output_dir)

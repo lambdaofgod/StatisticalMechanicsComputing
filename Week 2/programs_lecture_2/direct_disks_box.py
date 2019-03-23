@@ -16,5 +16,5 @@ while condition == False:
         else:
             L.append(a)
             condition = True
-print L
-print loop
+print(L)
+print(loop)

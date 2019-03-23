@@ -2,7 +2,7 @@ import random, math, pylab, mpl_toolkits.mplot3d
 
 x_list, y_list, z_list = [],[],[]
 nsamples = 1000
-for sample in xrange(nsamples):
+for sample in range(nsamples):
     x, y, z = random.gauss(0.0, 1.0), random.gauss(0.0, 1.0), random.gauss(0.0, 1.0)
     radius = math.sqrt(x ** 2 + y ** 2 + z ** 2)
     x_list.append(x / radius)

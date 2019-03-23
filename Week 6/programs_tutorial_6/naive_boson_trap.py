@@ -18,4 +18,4 @@ for s_0 in range(35):
                     E_mean += E * math.exp(-beta * E)
                     N0_mean += state.count(0) *\
                                math.exp(-beta * E)
-print n_states, Z, E_mean / Z / 5.0, N0_mean / Z / 5.0
+print(n_states, Z, E_mean / Z / 5.0, N0_mean / Z / 5.0)

@@ -11,7 +11,7 @@ dists = [math.sqrt(sum((positions[k][j] - positions[l][j]) ** 2 \
          for j in range(3))) for l in range(N) for k in range(l)]
 rmax = min(dists) / 2.0
 R = 1.0 / (1.0 / rmax - 1.0)
-print 'r = %f, R = %f' % (rmax, R)
+print('r = %f, R = %f' % (rmax, R))
 
 
 import pylab, numpy, mpl_toolkits.mplot3d

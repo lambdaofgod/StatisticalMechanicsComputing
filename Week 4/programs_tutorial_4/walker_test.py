@@ -26,10 +26,10 @@ if long_s != []:
     table.append((long_s[0][0], long_s[0][1], long_s[0][1]))
 else: 
     table.append((short_s[0][0], short_s[0][1], short_s[0][1]))
-print table
+print(table)
 samples = []
 n_samples = 10000
-for k in xrange(n_samples):
+for k in range(n_samples):
     Upsilon = random.uniform(0.0, pi_mean)
     i = random.randint(0, N-1)
     if Upsilon < table[i][0]:

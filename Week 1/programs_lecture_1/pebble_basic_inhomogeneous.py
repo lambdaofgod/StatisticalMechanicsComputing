@@ -14,6 +14,6 @@ for iter in range(n_iter):
     histo[pos] += 1 
 
 norm = sum(weight)
-print 'comparison:  weight, histogram'
+print('comparison:  weight, histogram')
 for k in range(9): 
-    print 'site: ', k,' weight: ', weight[k], ' histo: ', norm * histo[k] / float(n_iter)
+    print(('site: ', k,' weight: ', weight[k], ' histo: ', norm * histo[k] / float(n_iter)))

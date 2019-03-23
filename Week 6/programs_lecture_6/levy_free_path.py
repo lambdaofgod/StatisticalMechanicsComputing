@@ -16,4 +16,4 @@ for step in range(nsteps):
         sigma = math.sqrt(1.0 / (1.0 / dtau + 1.0 / dtau_prime))
         x.append(random.gauss(x_mean, sigma))
     x.append(xend)
-    print x
+    print(x)

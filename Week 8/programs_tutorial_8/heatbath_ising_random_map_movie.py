@@ -39,10 +39,10 @@ if os.path.isfile(filename):
     S1 = [int(i) for i in f.read().split()]
     f.close()
     if len(S1) != N: exit('wrong input')
-    print 'initial config read from', filename
+    print('initial config read from', filename)
 else:
     S1 = [random.choice([-1, 1]) for i in range(N)]
-    print 'random initial config'
+    print('random initial config')
 S2 = [1] * N
 nsteps = 10000
 nskip  = 10     # plot a snapshot every nskip steps
@@ -58,11 +58,11 @@ for step in range(nsteps):
     S2[k] = -1
     if Upsilon < 1.0 / (1.0 + math.exp(-2.0 * beta * h2)): S2[k] = 1
     if S1 == S2:
-        print 'step %i: coupling' % step
+        print('step %i: coupling' % step)
         plot_many_configurations([S1, S2], 'snap_%06i.png' % step, L, {j : 'g' for j in range(N)})
         break
     else:
-        print 'step %i: no coupling yet, %i different spins' % (step, sum(S1[ii] != S2[ii] for ii in range(N)))
+        print('step %i: no coupling yet, %i different spins' % (step, sum(S1[ii] != S2[ii] for ii in range(N))))
     # begin graphic output
     # colormap: green for equal spins, red for different spins, blue for site k
     if step % nskip == 0:

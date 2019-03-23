@@ -6,8 +6,8 @@ neighbor =  [[1, 3, 0, 0], [2, 4, 0, 1], [2, 5, 1, 2],
 t_max = 4
 site = 8
 t = 0
-print site
+print(site)
 while t < t_max:
     t += 1
     site = neighbor[site][random.randint(0, 3)]
-    print site
+    print(site)

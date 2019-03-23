@@ -9,7 +9,7 @@ dtau = beta / N
 delta = 1.0                  # maximum displacement of one bead
 n_steps = 20                 # number of Monte Carlo steps
 x = [0.0] * N                # initial path
-for step in xrange(n_steps):
+for step in range(n_steps):
     k = random.randint(0, N - 1)                  # random slice
     knext, kprev = (k + 1) % N, (k - 1) % N       # next/previous slices
     x_new = x[k] + random.uniform(-delta, delta)  # new position at slice k
@@ -21,4 +21,4 @@ for step in xrange(n_steps):
                   math.exp(-0.5 * dtau * x_new ** 2))
     if random.random() < new_weight / old_weight:
         x[k] = x_new
-    print x
+    print(x)

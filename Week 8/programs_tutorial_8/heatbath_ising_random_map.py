@@ -8,10 +8,10 @@ if os.path.isfile(filename):
     S = [int(i) for i in f.read().split()]
     f.close()
     if len(S) != N: exit('wrong input')
-    print 'initial config read from', filename
+    print('initial config read from', filename)
 else:
     S = [1] * N
-    print 'initial config: all sites up'
+    print('initial config: all sites up')
 nbr = {i : ((i // L) * L + (i + 1) % L, (i + L) % N,
             (i // L) * L + (i - 1) % L, (i - L) % N) \
                                     for i in range(N)}

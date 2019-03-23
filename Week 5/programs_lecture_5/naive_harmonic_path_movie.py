@@ -7,7 +7,7 @@ output_dir = 'snapshots_naive_harmonic_path'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 def show_path(x, k, x_old, Accepted, step):
     path = x + [x[0]]
-    y_axis = range(len(x) + 1)
+    y_axis = list(range(len(x) + 1))
     if Accepted:
         old_path = x[:]
         old_path[k] = x_old
@@ -30,7 +30,7 @@ n_steps = 30                                         # number of Monte Carlo ste
 x = [random.uniform(-1.0, 1.0) for k in range(N)]   # initial path
 show_path(x, 0, 0.0, False, 0)
 for step in range(n_steps):
-    print 'step',step
+    print('step',step)
     k = random.randint(0, N - 1)                     # randomly choose slice
     knext, kprev = (k + 1) % N, (k - 1) % N          # next/previous slices
     x_old = x[k]

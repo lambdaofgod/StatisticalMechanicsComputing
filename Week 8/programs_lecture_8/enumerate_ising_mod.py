@@ -15,7 +15,7 @@ S = [-1] * N
 E = -2 * N
 dos = {}
 dos[E] = 1
-tau = range(1, N + 2)
+tau = list(range(1, N + 2))
 for i in range(1, 2 ** N):
     tau, k = gray_flip(tau, N)
     h = sum(S[n] for n in nbr[k - 1])
@@ -24,4 +24,4 @@ for i in range(1, 2 ** N):
     if E in dos: dos[E] += 1
     else:        dos[E] = 1
 for E in sorted(dos.keys()):
-    print E, dos[E]
+    print(E, dos[E])

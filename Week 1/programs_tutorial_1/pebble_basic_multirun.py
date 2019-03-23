@@ -11,4 +11,4 @@ for run in range(N_runs):
     while t < t_max: 
         t += 1
         site = neighbor[site][random.randint(0, 3)]
-    print site
+    print(site)

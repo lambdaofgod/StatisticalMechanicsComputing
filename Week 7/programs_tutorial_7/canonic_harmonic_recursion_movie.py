@@ -16,7 +16,7 @@ beta = 1.0 / N ** (1.0 / 3.0) / T_star
 Z = canonic_recursion(N, beta)
 pi_k = [(z(k, beta) * Z[N - k] / Z[-1]) / float(N) for k in range(1, N + 1)]
 # graphics output
-pylab.plot(range(1, N + 1), pi_k, 'b-', lw=2.5)
+pylab.plot(list(range(1, N + 1)), pi_k, 'b-', lw=2.5)
 pylab.ylim(0.0, 0.01)
 pylab.xlabel('cycle length $k$', fontsize=16)
 pylab.ylabel('cycle probability $\pi_k$', fontsize=16)

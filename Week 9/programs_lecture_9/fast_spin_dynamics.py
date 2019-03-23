@@ -11,5 +11,5 @@ while t_tot <= t_max:
     delta_t = int(math.log(Upsilon) / log_lambda) + 1
     M_tot += (delta_t - 1)
     t_tot += (delta_t + 1)
-print 'magnetization:', M_tot / float(t_tot)
-print 'exact result: ', math.tanh(beta * h)
+print('magnetization:', M_tot / float(t_tot))
+print('exact result: ', math.tanh(beta * h))

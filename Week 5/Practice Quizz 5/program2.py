@@ -8,5 +8,5 @@ for t in range(100000):
     min_dist = min((b[0] - c[0]) ** 2 + (b[1] - c[1]) ** 2 for c in L if c != a)
     if min_dist > 4.0 * sigma ** 2:
         a[:] = b
-    print L
-    print 'At t = ',t
+    print(L)
+    print('At t = ',t)

@@ -11,8 +11,8 @@ for t in range(1000):
         if min_dist > 4.0 * sigma ** 2:
             a[:] = b
             break
-    print L
-    print 'At t = ',t
+    print(L)
+    print('At t = ',t)
     #L_hist += L
 
 

@@ -23,7 +23,7 @@ for step in range(n_steps):
                    math.exp(-0.5 * dtau * x_new ** 2))
     if random.uniform(0.0, 1.0) < new_weight / old_weight:
         x[k] = x_new
-    print x
+    print(x)
     #normed histogram of the x[0], that is the position of the path at slice 0
     if step%10 == 0: hist += x[0] 
 

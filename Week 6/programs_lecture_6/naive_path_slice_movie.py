@@ -11,7 +11,7 @@ delta = 1.0                 # maximum displacement of xk
 n_steps = 100000            # number of Monte Carlo steps
 data_hist = []
 xk = 0.0                    # initial value of xk
-for step in xrange(n_steps):
+for step in range(n_steps):
     xk_new = xk + random.uniform(-delta, delta)
     old_weight  = (rho_free(x_dprime, xk, dtau_dprime) *
                    rho_free(xk, x_prime, dtau_prime))

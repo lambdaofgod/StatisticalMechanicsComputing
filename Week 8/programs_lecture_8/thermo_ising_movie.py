@@ -19,7 +19,7 @@ for T in list_T:
     E_av = 0.0
     M_av = 0.0
     E2_av = 0.0
-    for E in dos.keys():
+    for E in list(dos.keys()):
         weight = math.exp(- E / T) * dos[E]
         Z += weight
         E_av += weight * E

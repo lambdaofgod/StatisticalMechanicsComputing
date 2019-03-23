@@ -14,7 +14,7 @@ while True:
     dists = [math.sqrt(sum((positions[k][j] - positions[l][j]) ** 2 \
              for j in range(3))) for l in range(N) for k in range(l)]
     if min(dists) > 2.0 * r: break
-print attempts, 'trials required'
+print(attempts, 'trials required')
 
 R = 1.0 / (1.0 / r - 1.0)
 x, y, z = [[(1.0 + R) * pos[j] for pos in positions] + [0.0] for j in range(3)]

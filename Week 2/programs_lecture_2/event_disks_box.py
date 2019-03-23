@@ -58,7 +58,7 @@ for event in range(n_events):
             #Change the velocities for both particles a,b 
             vel[a][k] += e_perp[k] * scal 
             vel[b][k] -= e_perp[k] * scal 
-    print 'event', event
-    print 'time', t
-    print 'pos', pos
-    print 'vel', vel
+    print(('event', event))
+    print(('time', t))
+    print(('pos', pos))
+    print(('vel', vel))

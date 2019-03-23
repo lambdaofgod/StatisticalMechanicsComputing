@@ -21,8 +21,8 @@ for step in range(nsteps):
     norm = math.sqrt(sum(xk ** 2 for xk in newpos))
     newpos = [xk / norm for xk in newpos]
     new_min_dist = min([math.sqrt(sum((positions[l][j] - newpos[j]) ** 2 \
-                 for j in range(3))) for l in range(k) + range(k + 1, N)])
+                 for j in range(3))) for l in list(range(k)) + list(range(k + 1, N))])
     if new_min_dist > 2.0 * r:
         positions = positions[:k] + [newpos] + positions[k + 1:]
         n_acc += 1
-print 'acceptance rate:', n_acc / float(nsteps)
+print('acceptance rate:', n_acc / float(nsteps))

@@ -14,5 +14,5 @@ for k in range(1, N):
     x.append(random.gauss(Ups2 / Ups1, \
              1.0 / math.sqrt(Ups1)))
 x.append(xend)
-print x
+print(x)
 

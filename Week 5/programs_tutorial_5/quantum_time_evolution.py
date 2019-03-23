@@ -60,7 +60,7 @@ timestep = 0
 while time < t_max:
     if timestep % 4 == 0:
         show(grid_x, numpy.absolute(psi) ** 2.0, potential, time, timestep)
-    print time
+    print(time)
     time += delta_t
     timestep += 1
     psi = time_step_evolution(psi, potential, grid_x, grid_p, dx, dp, delta_t)

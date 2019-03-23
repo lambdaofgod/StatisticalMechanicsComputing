@@ -1,6 +1,6 @@
 import random, math, os, pylab
 
-output_dir = 'C:\Users\Borghi\Desktop\Week 2\programs_lecture_2\direct_disks_box_movie'
+output_dir = 'C:\\Users\Borghi\Desktop\Week 2\programs_lecture_2\direct_disks_box_movie'
 
 def direct_disks_box(N, sigma):
     condition = False

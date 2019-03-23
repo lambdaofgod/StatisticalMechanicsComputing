@@ -10,7 +10,7 @@ x_dprime = 1.0
 delta = 1.0
 n_steps = 100
 xk = 0.0
-for step in xrange(n_steps):
+for step in range(n_steps):
 	#Propose xk with a flat distribution 
 	#and accepted it with a gaussian distribution
 	#This generates the rejection rate of the Metropolis algorithm
@@ -21,4 +21,4 @@ for step in xrange(n_steps):
                    rho_free(xk_new, x_prime, dtau_prime))
     if random.random() < new_weight / old_weight:
         xk = xk_new
-    print xk
+    print(xk)

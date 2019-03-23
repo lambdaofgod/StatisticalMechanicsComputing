@@ -16,4 +16,4 @@ N = 1000
 beta = 1.0
 Z = canonic_recursion(N, beta)
 #Print las element of Z
-print N, Z[-1]
+print(N, Z[-1])

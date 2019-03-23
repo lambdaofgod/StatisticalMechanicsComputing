@@ -12,5 +12,5 @@ for t in range(tmax):
     elif random.uniform(0.0, 1.0) < p:
         sigma = -1
     M_tot += sigma
-print 'magnetization:', M_tot / float(tmax)
-print 'exact result: ', math.tanh(beta * h)
+print('magnetization:', M_tot / float(tmax))
+print('exact result: ', math.tanh(beta * h))

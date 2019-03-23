@@ -24,13 +24,13 @@ while True:
     positions = [unit_sphere() for j in range(N)] 
     if minimum_distance(positions, N) > 2.0 * r: break
 n_acc = 0
-for step in xrange(nsteps):
+for step in range(nsteps):
     k = random.randint(0, N - 1)
     newpos = [positions[k][j] + random.gauss(0, sigma) for j in range(3)]
     norm = math.sqrt(sum(xk ** 2 for xk in newpos))
     newpos = [xk / norm for xk in newpos]
     new_min_dist = min([math.sqrt(sum((positions[l][j] - newpos[j]) ** 2 \
-                   for j in range(3))) for l in range(k) + range(k + 1, N)])
+                   for j in range(3))) for l in list(range(k)) + list(range(k + 1, N))])
     if new_min_dist > 2.0 * r:
         positions = positions[:k] + [newpos] + positions[k + 1:]
         n_acc += 1
@@ -42,6 +42,6 @@ for step in xrange(nsteps):
         r = resize_disks(positions, r, N, gamma)
         R = 1.0 / (1.0 / r - 1.0)
         density = 1.0 * N / 2.0 * (1.0 - math.sqrt(1.0 - r ** 2))
-print 'final r', r
-print 'final R', R
-print 'final density', density
+print('final r', r)
+print('final R', R)
+print('final density', density)

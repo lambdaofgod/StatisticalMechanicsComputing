@@ -14,4 +14,4 @@ while condition == False:
         else:
             L.append(a)
             condition = True
-print L
+print(L)

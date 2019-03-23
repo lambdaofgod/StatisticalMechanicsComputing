@@ -10,6 +10,6 @@ for t in range(10000):
     box_cond = min(b[0], b[1]) < sigma or max(b[0], b[1]) > 1.0 - sigma
     if not (box_cond or min_dist < 4.0 * sigma ** 2):
         L.append(b)
-        print L
+        print(L)
     else:
         L.append(a)

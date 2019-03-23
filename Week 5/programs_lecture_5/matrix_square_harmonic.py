@@ -22,4 +22,4 @@ while beta_tmp < beta:
     rho = numpy.dot(rho, rho)
     rho *= dx
     beta_tmp *= 2.0
-    print 'beta: %s -> %s' % (beta_tmp / 2.0, beta_tmp)
+    print('beta: %s -> %s' % (beta_tmp / 2.0, beta_tmp))

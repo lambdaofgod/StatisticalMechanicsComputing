@@ -10,12 +10,12 @@ def gauss_test(sigma):
     return [x, y]
 
 # exact distrubution:
-list_x = [i * 0.1 for i in xrange(-40, 40)]
+list_x = [i * 0.1 for i in range(-40, 40)]
 list_y = [math.exp(- x ** 2 / 2.0) / (math.sqrt(2.0 * math.pi)) for x in list_x]
 # sampled distribution:
 n_sampled_pairs = 50000
 data = []
-for sample in xrange(n_sampled_pairs):
+for sample in range(n_sampled_pairs):
         data += gauss_test(1.0)
 	#print data
 # graphics output

@@ -20,10 +20,10 @@ x_mean = 5.0
 list_N = [10, 100, 1000, 10000]
 n_steps = 10000000
 for N in list_N:
-    print N
+    print(N)
     x = []
-    for step in xrange(n_steps / N):
-        Sigma = sum(random.uniform(0.0, 1.0) ** gamma for j in xrange(N))
+    for step in range(n_steps / N):
+        Sigma = sum(random.uniform(0.0, 1.0) ** gamma for j in range(N))
         x.append((Sigma / float(N) - x_mean) * float(N) ** (1.0 + gamma))
     pylab.hist(x, bins=100, normed=True, alpha=0.5, range=[-10.0, 10.0], label='N=%i' % N)
 x_stable = [-10.0 + i * 0.1 for i in range(200)]
@@ -31,7 +31,7 @@ y_stable = [pi_exact(x, gamma, c0, c1) for x in x_stable]
 pylab.plot(x_stable, y_stable, 'r', lw=2.5, label='Levy stable distr.')
 pylab.legend()
 pylab.axis([-10.0, 10.0, 0.0, 0.3])
-pylab.xlabel('rescaled average $\Upsilon$', fontsize=18)
-pylab.ylabel('histogram $\pi(\Upsilon)$', fontsize=18)
+pylab.xlabel('rescaled average $\\Upsilon$', fontsize=18)
+pylab.ylabel('histogram $\pi(\\Upsilon)$', fontsize=18)
 pylab.title('$\gamma=%f$' % gamma, fontsize=18)
 pylab.savefig('histo_direct_gamma_average_rescaled.png')

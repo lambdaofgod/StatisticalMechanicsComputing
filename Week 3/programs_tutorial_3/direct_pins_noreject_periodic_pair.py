@@ -13,10 +13,10 @@ x_max = 30.0  # maximum of the histogram range
 data, pair_corr = [], []
 for run in range(n_runs):
     Lprime = L - 2.0 * sigma
-    y_sorted = [random.uniform(0, Lprime - 2.0 * (N - 1.0) * sigma) for k in xrange(N - 1)]
+    y_sorted = [random.uniform(0, Lprime - 2.0 * (N - 1.0) * sigma) for k in range(N - 1)]
     y_sorted.sort()
-    sample = [y_sorted[k] + (2.0 * k + 1.0) * sigma for k in xrange(N - 1) ] + [L - sigma]
-    pair_corr += [dist(sample[i], sample[j], L) for i in xrange(N) for j in xrange(i)]
+    sample = [y_sorted[k] + (2.0 * k + 1.0) * sigma for k in range(N - 1) ] + [L - sigma]
+    pair_corr += [dist(sample[i], sample[j], L) for i in range(N) for j in range(i)]
 histo, bins, patches = pylab.hist(pair_corr, bins=800, normed=True)
 pylab.xlim(0.0, x_max)
 pylab.title('Pair-correlation function $\pi(x,y)$\nN=%i, $\sigma$=%.2f, L=%.1f, density=%.2f' % (N, sigma, L, density))

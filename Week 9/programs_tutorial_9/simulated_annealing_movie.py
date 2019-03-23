@@ -30,7 +30,7 @@ for step in range(nsteps):
     norm = math.sqrt(sum(xk ** 2 for xk in newpos))
     newpos = [xk / norm for xk in newpos]
     new_min_dist = min([math.sqrt(sum((positions[l][j] - newpos[j]) ** 2 \
-                   for j in range(3))) for l in range(k) + range(k + 1, N)])
+                   for j in range(3))) for l in list(range(k)) + list(range(k + 1, N))])
     if new_min_dist > 2.0 * r:
         positions = positions[:k] + [newpos] + positions[k+1:]
         n_acc += 1
@@ -42,8 +42,8 @@ for step in range(nsteps):
         r = resize_disks(positions, r, N, gamma)
         R = 1.0 / (1.0 / r - 1.0)
         density = 1.0 * N / 2.0 * (1.0 - math.sqrt(1.0 - r ** 2))
-print
-print 'Final r = %0.5f'%r + '  Final R = %0.5f'%R + '  Final density = %0.5f'%density
+print()
+print('Final r = %0.5f'%r + '  Final R = %0.5f'%R + '  Final density = %0.5f'%density)
 
 R = 1.0 / (1.0 / r - 1.0)
 x, y, z = [[(1.0 + R) * pos[j] for pos in positions] + [0.0] for j in range(3)]

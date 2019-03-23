@@ -19,4 +19,4 @@ N = 4
 sigma = 0.2
 n_runs = 100
 for run in range(n_runs):
-    print run, direct_disks_box(N, sigma)
+    print((run, direct_disks_box(N, sigma)))
